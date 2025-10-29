@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analytics Dashboard – Innovify XR</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ====== PROJECT DETAIL PAGE STYLING ====== */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f9f9fb;
+      color: #222;
+      margin: 0;
+    }
+
+    .project-header {
+      background: linear-gradient(135deg, #673ab7, #9c27b0);
+      color: white;
+      text-align: center;
+      padding: 100px 20px 80px;
+      position: relative;
+    }
+
+    .project-header h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+    }
+
+    .project-header p {
+      font-size: 1.1em;
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Return Home Button */
+    .return-home {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+    }
+
+    .return-home a {
+      background: white;
+      color: #673ab7;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95em;
+      transition: all 0.3s ease;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    }
+
+    .return-home a:hover {
+      background: #512da8;
+      color: #fff;
+    }
+
+    .project-container {
+      max-width: 1100px;
+      margin: 60px auto;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+      padding: 40px;
+    }
+
+    .project-image {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .project-image img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    }
+
+    .project-section {
+      margin-bottom: 40px;
+    }
+
+    .project-section h2 {
+      color: #673ab7;
+      margin-bottom: 10px;
+      border-left: 4px solid #673ab7;
+      padding-left: 10px;
+    }
+
+    .project-section ul {
+      list-style: disc;
+      margin-left: 20px;
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .tech {
+      background: #ede7f6;
+      color: #673ab7;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: 500;
+      font-size: 0.9em;
+    }
+
+    .cta-section {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .cta-section a {
+      background: #673ab7;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .cta-section a:hover {
+      background: #512da8;
+    }
+
+    @media (max-width: 768px) {
+      .project-container {
+        padding: 20px;
+      }
+      .project-header h1 {
+        font-size: 2.2em;
+      }
+      .return-home {
+        top: 20px;
+        left: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Project Header ===== -->
+  <header class="project-header">
+    <div class="return-home">
+      <a href="index.html">← Return Home</a>
+    </div>
+
+    <h1>Analytics Dashboard</h1>
+    <p>Real-time business insights with data visualization, performance tracking, and AI-powered analytics.</p>
+  </header>
+
+  <!-- ===== Project Content ===== -->
+  <section class="project-container">
+
+    <div class="project-image">
+      <img src="images/analiytic dev.jpg" alt="Analytics Dashboard">
+    </div>
+
+    <div class="project-section">
+      <h2>Overview</h2>
+      <p>
+        The Analytics Dashboard is a dynamic web application that provides real-time business intelligence and
+        performance metrics. It helps organizations monitor KPIs, visualize trends, and make data-driven decisions using
+        AI-based analytics and interactive charts.
+      </p>
+    </div>
+
+    <div class="project-section">
+      <h2>Key Features</h2>
+      <ul>
+        <li>Customizable dashboards and KPI tracking.</li>
+        <li>AI-powered data insights and forecasting.</li>
+        <li>Interactive charts, heatmaps, and trend lines.</li>
+        <li>Role-based access and data security.</li>
+        <li>Real-time data updates with WebSocket integration.</li>
+        <li>Export reports in PDF, Excel, and CSV formats.</li>
+      </ul>
+    </div>
+
+    <div class="project-section">
+      <h2>Technology Stack</h2>
+      <div class="tech-stack">
+        <span class="tech">React.js</span>
+        <span class="tech">Node.js</span>
+        <span class="tech">Express.js</span>
+        <span class="tech">MongoDB</span>
+        <span class="tech">Chart.js</span>
+        <span class="tech">Tailwind CSS</span>
+        <span class="tech">Python (AI Models)</span>
+        <span class="tech">WebSocket</span>
+      </div>
+    </div>
+
+    <div class="project-section">
+      <h2>Data Visualization Highlights</h2>
+      <p>
+        The dashboard offers multiple visualization options such as line charts for trends, pie charts for distribution,
+        and bar graphs for comparison. Advanced users can filter, drill down, and analyze data interactively to uncover
+        actionable insights in seconds.
+      </p>
+    </div>
+
+    <div class="project-section">
+      <h2>Client Benefits</h2>
+      <ul>
+        <li>Improved decision-making with real-time insights.</li>
+        <li>Centralized data for business performance monitoring.</li>
+        <li>Increased efficiency through automated reports.</li>
+        <li>Enhanced data security and controlled user access.</li>
+      </ul>
+    </div>
+
+    <div class="cta-section">
+      <a href="contact.html">Request a Demo →</a>
+    </div>
+
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Innovify XR Developer</title>
+  <link rel="stylesheet" href="contact.css">
+</head>
+<style>
+    /* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 8%;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.6em;
+  font-weight: 700;
+  color: #333;
+}
+.logo span {
+  color: #0077ff;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #0077ff;
+}
+
+.btn {
+  background: #0077ff;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 0.95em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #005fcc;
+}
+/* ===== CONTACT SECTION ===== */
+.contact {
+  padding: 100px 8%;
+  background: #f4f9ff;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.contact-header h1 {
+  font-size: 2.3em;
+  color: #0077ff;
+}
+
+.contact-header h1 span {
+  color: #222;
+}
+
+.contact-header p {
+  color: #555;
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+/* ===== CONTACT CONTAINER ===== */
+.contact-container {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Contact Info */
+.contact-info {
+  flex: 1;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2 {
+  color: #0077ff;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  color: #444;
+  margin-bottom: 10px;
+  font-size: 0.95em;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a img {
+  width: 30px;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.social-links a img:hover {
+  transform: scale(1.2);
+}
+
+/* Contact Form */
+.contact-form {
+  flex: 1.5;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1em;
+  transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #0077ff;
+  box-shadow: 0 0 5px rgba(0, 119, 255, 0.2);
+}
+
+.contact-form .btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 1em;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+/* ===== MAP SECTION ===== */
+.map-section {
+  background: #fff;
+  padding: 50px 8%;
+  text-align: center;
+}
+
+.map-section h2 {
+  color: #0077ff;
+  margin-bottom: 25px;
+}
+
+.map-section iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #0a0a0a;
+  color: #ddd;
+  padding: 60px 8% 20px;
+  margin-top: 80px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+/* About */
+.footer-about {
+  flex: 1 1 300px;
+}
+.footer-about h2 {
+  color: #fff;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+.footer-about h2 span {
+  color: #0077ff;
+}
+.footer-about p {
+  color: #aaa;
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+/* Links */
+.footer-links {
+  flex: 1 1 200px;
+}
+.footer-links h3 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+.footer-links ul {
+  list-style: none;
+}
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+.footer-links ul li a {
+  text-decoration: none;
+  color: #aaa;
+  transition: 0.3s;
+}
+.footer-links ul li a:hover {
+  color: #0077ff;
+}
+
+/* Social */
+.footer-social {
+  flex: 1 1 200px;
+}
+.footer-social h3 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+.social-icons a img {
+  width: 24px;
+  margin-right: 10px;
+  filter: brightness(0) invert(1);
+  transition: 0.3s;
+}
+.social-icons a img:hover {
+  filter: invert(60%) sepia(100%) saturate(500%) hue-rotate(190deg);
+}
+
+/* Bottom Line */
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 0.85em;
+  color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-icons a img {
+    margin: 5px;
+  }
+}
+
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-form,
+  .contact-info {
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+</style>
+<body>
+  <!-- ===== NAVBAR ===== -->
+   <header>
+    <nav class="navbar">
+      <div class="logo">Innovify<span>XR</span></div>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="skill.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="contact.html"><button class="btn">Let’s Talk</button></a></li>
+      </ul>
+
+      <div class="menu-icon" id="menu-icon">&#9776;</div>
+    </nav>
+  </header>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="contact">
+    <div class="contact-header">
+      <h1>Get In <span>Touch</span></h1>
+      <p>We’d love to hear from you! Whether you have a project idea or just want to say hello, feel free to contact us.</p>
+    </div>
+
+    <div class="contact-container">
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h2>Contact Information</h2>
+        <p><strong>Address:</strong> Spring city, Mainwali, Punjab, Pakistan</p>
+        <p><strong>Email:</strong> waqas788799@gmail.com</p>
+        <p><strong>Phone:</strong> +923257643935</p>
+        <p><strong>Working Hours:</strong> Mon - Fri, 9AM - 6PM</p>
+
+        <div class="social-links">
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"></a>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+
+         
+
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Write your message..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAP SECTION ===== -->
+  <section class="map-section">
+    <h2>Find Us on Google Maps</h2>
+    <iframe src="https://www.google.com/maps?q=San%20Francisco&output=embed" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h2>Innovify<span>XR</span></h2>
+        <p>
+          Innovify XR Developer builds next-generation digital experiences through 
+          app, web, and game development. We transform creative ideas into reality.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="skill.html">Skills</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook"></a>
+          <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter"></a>
+          <a href="https://www.linkedin.com/in/waqas-hameed-a32b05260/"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn"></a>
+          <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Innovify XR Developer | All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

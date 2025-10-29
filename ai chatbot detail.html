@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Chatbot – Innovify XR</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ====== PROJECT DETAIL PAGE STYLING ====== */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f9f9fb;
+      color: #222;
+      margin: 0;
+    }
+
+    .project-header {
+      background: linear-gradient(135deg, #1e88e5, #42a5f5);
+      color: white;
+      text-align: center;
+      padding: 100px 20px 80px;
+      position: relative;
+    }
+
+    .project-header h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+    }
+
+    .project-header p {
+      font-size: 1.1em;
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Return Home Button */
+    .return-home {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+    }
+
+    .return-home a {
+      background: white;
+      color: #1e88e5;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95em;
+      transition: all 0.3s ease;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    }
+
+    .return-home a:hover {
+      background: #1565c0;
+      color: #fff;
+    }
+
+    .project-container {
+      max-width: 1100px;
+      margin: 60px auto;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+      padding: 40px;
+    }
+
+    .project-image {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .project-image img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    }
+
+    .project-section {
+      margin-bottom: 40px;
+    }
+
+    .project-section h2 {
+      color: #1e88e5;
+      margin-bottom: 10px;
+      border-left: 4px solid #1e88e5;
+      padding-left: 10px;
+    }
+
+    .project-section ul {
+      list-style: disc;
+      margin-left: 20px;
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .tech {
+      background: #e3f2fd;
+      color: #1e88e5;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: 500;
+      font-size: 0.9em;
+    }
+
+    .cta-section {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .cta-section a {
+      background: #1e88e5;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .cta-section a:hover {
+      background: #1565c0;
+    }
+
+    @media (max-width: 768px) {
+      .project-container {
+        padding: 20px;
+      }
+      .project-header h1 {
+        font-size: 2.2em;
+      }
+      .return-home {
+        top: 20px;
+        left: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Project Header ===== -->
+  <header class="project-header">
+    <div class="return-home">
+      <a href="index.html">← Return Home</a>
+    </div>
+
+    <h1>AI Chatbot Assistant</h1>
+    <p>Smart conversational assistant built using AI, NLP, and real-time messaging technology.</p>
+  </header>
+
+  <!-- ===== Project Content ===== -->
+  <section class="project-container">
+
+    <div class="project-image">
+      <img src="images/ai dev.jpg" alt="AI Chatbot Interface">
+    </div>
+
+    <div class="project-section">
+      <h2>Overview</h2>
+      <p>
+        The AI Chatbot Assistant is an advanced conversational platform that provides human-like responses,
+        helps businesses automate customer support, and enhances user engagement using Natural Language Processing (NLP)
+        and Machine Learning algorithms. It can be integrated into websites, mobile apps, or standalone chat systems.
+      </p>
+    </div>
+
+    <div class="project-section">
+      <h2>Key Features</h2>
+      <ul>
+        <li>Real-time chat with human-like AI responses.</li>
+        <li>24/7 automated customer support.</li>
+        <li>Personalized conversation memory.</li>
+        <li>Integration with WhatsApp, Messenger, and web apps.</li>
+        <li>Admin dashboard with analytics and chat logs.</li>
+        <li>Multilingual support and custom tone adaptation.</li>
+      </ul>
+    </div>
+
+    <div class="project-section">
+      <h2>Technology Stack</h2>
+      <div class="tech-stack">
+        <span class="tech">Next.js</span>
+        <span class="tech">Node.js</span>
+        <span class="tech">Python (NLP)</span>
+        <span class="tech">OpenAI API</span>
+        <span class="tech">MongoDB</span>
+        <span class="tech">Socket.io</span>
+        <span class="tech">Tailwind CSS</span>
+      </div>
+    </div>
+
+    <div class="project-section">
+      <h2>Development Process</h2>
+      <p>
+        The project follows an agile methodology with sprint-based development. Our team focused on scalability,
+        user experience, and accurate natural language understanding. The AI layer was trained on diverse datasets
+        to improve conversational quality and reduce response latency.
+      </p>
+    </div>
+
+    <div class="project-section">
+      <h2>Client Benefits</h2>
+      <ul>
+        <li>Reduced customer service workload by up to 70%.</li>
+        <li>Enhanced user engagement with instant responses.</li>
+        <li>Improved lead conversion through conversational flow.</li>
+        <li>Detailed analytics for user behavior and intent tracking.</li>
+      </ul>
+    </div>
+
+    <div class="cta-section">
+      <a href="contact.html">Contact Us to Build Your AI Chatbot →</a>
+    </div>
+
+  </section>
+
+</body>
+</html>

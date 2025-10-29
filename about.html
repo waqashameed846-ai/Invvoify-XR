@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Innovify XR Developer</title>
+  <link rel="stylesheet" href="about.css" />
+</head>
+<style>
+    /* ===== RESET ===== */
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 8%;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.6em;
+  font-weight: 700;
+  color: #333;
+}
+.logo span {
+  color: #0077ff;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #0077ff;
+}
+
+.btn {
+  background: #0077ff;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 0.95em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #005fcc;
+}
+
+/* ===== ABOUT HERO ===== */
+.about-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 8%;
+  flex-wrap: wrap;
+  background: #f9fbff;
+}
+
+.about-content {
+  flex: 1;
+  min-width: 320px;
+  padding-right: 40px;
+}
+
+.about-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  color: #0077ff;
+}
+
+.about-content h1 span {
+  color: #222;
+}
+
+.about-content p {
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 320px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ===== MISSION SECTION ===== */
+.mission {
+  text-align: center;
+  padding: 80px 8%;
+}
+
+.mission h2 {
+  font-size: 2em;
+  color: #0077ff;
+  margin-bottom: 15px;
+}
+
+.mission h2 span {
+  color: #222;
+}
+
+.mission p {
+  max-width: 750px;
+  margin: 0 auto 50px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.mission-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #f2f7ff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #0077ff;
+  margin-bottom: 10px;
+}
+
+/* ===== TEAM SECTION ===== */
+.team {
+  padding: 100px 8%;
+  background: #ffffff;
+  text-align: center;
+}
+
+.team h2 {
+  font-size: 2em;
+  color: #0077ff;
+  margin-bottom: 50px;
+}
+
+.team h2 span {
+  color: #222;
+}
+
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.team-member {
+  background: #f9fbff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+}
+
+.team-member img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.team-member h3 {
+  color: #0077ff;
+  margin-bottom: 8px;
+}
+
+.team-member p {
+  color: #555;
+  font-size: 0.95em;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #0a0a0a;
+  color: #ddd;
+  padding: 60px 8% 20px;
+  margin-top: 80px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+/* About */
+.footer-about {
+  flex: 1 1 300px;
+}
+.footer-about h2 {
+  color: #fff;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+.footer-about h2 span {
+  color: #0077ff;
+}
+.footer-about p {
+  color: #aaa;
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+/* Links */
+.footer-links {
+  flex: 1 1 200px;
+}
+.footer-links h3 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+.footer-links ul {
+  list-style: none;
+}
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+.footer-links ul li a {
+  text-decoration: none;
+  color: #aaa;
+  transition: 0.3s;
+}
+.footer-links ul li a:hover {
+  color: #0077ff;
+}
+
+/* Social */
+.footer-social {
+  flex: 1 1 200px;
+}
+.footer-social h3 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+.social-icons a img {
+  width: 24px;
+  margin-right: 10px;
+  filter: brightness(0) invert(1);
+  transition: 0.3s;
+}
+.social-icons a img:hover {
+  filter: invert(60%) sepia(100%) saturate(500%) hue-rotate(190deg);
+}
+
+/* Bottom Line */
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 0.85em;
+  color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-icons a img {
+    margin: 5px;
+  }
+}
+
+</style>
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Innovify<span>XR</span></div>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="skill.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html"><button class="btn">Let’s Talk</button></a></li>
+      </ul>
+
+      <div class="menu-icon" id="menu-icon">&#9776;</div>
+    </nav>
+  </header>
+
+  <!-- ===== About Section ===== -->
+  <section class="about-hero">
+    <div class="about-content">
+      <h1>About <span>Innovify XR Developer</span></h1>
+      <p>We are a creative technology company that specializes in crafting digital experiences through Web, App, Game, and XR (AR/VR) Development. Our mission is to innovate, inspire, and impact through the power of technology.</p>
+      <a href="#team" class="btn">Meet the Team</a>
+    </div>
+    <div class="about-image">
+      <img src="images/about.jpg" alt="Team at work">
+    </div>
+  </section>
+
+  <!-- ===== Mission Section ===== -->
+  <section class="mission">
+    <h2>Our <span>Mission</span></h2>
+    <p>At Innovify XR, we strive to revolutionize digital experiences by merging creativity with cutting-edge technologies. We believe in building products that make life smarter, businesses stronger, and users happier.</p>
+
+    <div class="mission-cards">
+      <div class="card">
+        <h3>Innovation</h3>
+        <p>We continuously explore emerging tech like AR, VR, and AI to stay ahead of the curve and deliver futuristic solutions.</p>
+      </div>
+      <div class="card">
+        <h3>Quality</h3>
+        <p>We ensure that every project we deliver meets global standards of design, performance, and user experience.</p>
+      </div>
+      <div class="card">
+        <h3>Collaboration</h3>
+        <p>Our team thrives on collaboration — working closely with clients to turn their ideas into impactful realities.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Team Section ===== -->
+  <section class="team" id="team">
+    <h2>Meet Our <span>Team</span></h2>
+    <div class="team-container">
+      <div class="team-member">
+        <img src="images/waqas1.png" alt="CEO">
+        <h3>Waqas Hameed</h3>
+        <p>Founder & XR Developer</p>
+      </div>
+      <div class="team-member">
+        <img src="images/emily.jpeg" alt="Developer">
+        <h3>Emily Johnson</h3>
+        <p>Lead Web Developer</p>
+      </div>
+      <div class="team-member">
+        <img src="images/micheali.jpeg" alt="Designer">
+        <h3>Michael Lee</h3>
+        <p>App & Game Designer</p>
+      </div>
+      <div class="team-member">
+        <img src="images/soft.jpeg" alt="Engineer">
+        <h3>Sophia Brown</h3>
+        <p>AI & XR Engineer</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h2>Innovify<span>XR</span></h2>
+        <p>
+          Innovify XR Developer builds next-generation digital experiences through 
+          app, web, and game development. We transform creative ideas into reality.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="skill.html">Skills</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook"></a>
+          <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter"></a>
+          <a href="https://www.linkedin.com/in/waqas-hameed-a32b05260/"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn"></a>
+          <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Innovify XR Developer | All Rights Reserved.</p>
+    </div>
+  </footer>
+
+
+</body>
+</html>
